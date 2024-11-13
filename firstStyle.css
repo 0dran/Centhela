@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --bg-color: #fefbf4;
+    --brown-color: #d5afa2;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* --------- HEADER ---------*/
+header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    
+}
+
+.header-section{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pages{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pages>li{
+    list-style: none;
+    width: 50%;
+    text-align: center;
+}
+
+.pages>li>a{
+    position: relative;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pages>li>a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.pages>li>a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.logo-name{
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.cart>img{
+    height: 30%;
+}
+
+
+/* --------- HERO ---------*/
+#hero{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35rem;
+}
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%)
+
+
+}
+
+.hero-content{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    gap: 5%;
+}
+
+.hero-content>*{
+    color: #fefbf4;
+    text-align: center;
+    width: 60%;
+    line-height: 1.1;
+}
+
+.hero-title{ 
+    font-size: 4rem;
+}
+
+.hero-desc{
+    line-height: 1.8;
+    width: 50%;
+}
+
+.hero-btn{
+    width: 10rem;
+    height: 3rem;
+}
+
+.hero-btn>a>button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fefbf4;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: aliceblue;
+    font-weight: 400;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.hero-btn>a>button:hover{
+    background-color: aliceblue;
+    color: var(--brown-color);
+}
+
+/* --------- SERVICES ---------*/
+#services-container{
+    margin: auto;
+    width: 60%;
+    height: 20rem;
+}
+
+.serv-title{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.services{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    gap: 1%;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f1ea;
+    gap: 5%;
+}
+
+.service>*{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.service>.name{
+    font-weight: 700;
+}
+
+.service>.text{
+    font-weight: 400;
+    width: 90%;
+}
+
+/* --------- SERVICES ---------*/
+footer{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.us{
+    width: 7rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border: 2px solid #c1c0bb;
+    border-radius: 1rem;
+    background-color: #878682;
+    color: aliceblue;
+}
+
+.email-title{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.email{
+    width: 70%;
+    height: 2.5rem;
+    border: 2px solid #c1c0bb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.email>*{
+    font-weight: 400;
+}
+
+.email>.text{
+    margin-left: 2rem;
+}
+
+.email>.arrow{
+    font-size: 1.3rem;
+    margin-right: 2rem;
+}
+
+/* --------- SERVICES ---------*/
+.wsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #5bcd75;
+    text-decoration: none;
+    border-radius: 3rem;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+}
+
+.wsp>.img{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wsp>.img>img{
+    height: 60%;
+}
+
+.wsp>.txt{
+    padding-right: 0.5rem;
+    color: aliceblue;
+}

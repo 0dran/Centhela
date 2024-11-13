@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --bg-color: #fefbf4;
+    --brown-color: #d5afa2;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+/* --------- HEADER ---------*/
+header{
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem;
+}
+
+header>div{
+    font-size: 3rem;
+
+
+}
+
+/* --------- INTRO ---------*/
+.intro{
+    margin: auto;
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fadeIntro{
+    animation: fadeIntro 1s forwards;
+}
+
+@keyframes fadeIntro{
+    0%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+}
+
+.intro>div{
+    text-align: center;
+}
+
+.title{
+    font-size: 3rem;
+}
+
+.first-desc{
+    font-size: 2rem;
+}
+
+.btn>button{
+    width: 10rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    border: 0;
+    background-color: var(--brown-color);
+    color: aliceblue;
+    margin:0 auto;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.btn>button:hover{
+    background-color: rgb(255, 255, 255);
+    color: var(--brown-color);
+}
+
+
+/* --------- FORM ---------*/
+.invisible{
+    display: none;
+}
+
+.appear{
+    animation: appear 1s forwards;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.question{
+    font-size: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.opt{
+    width: 15rem;
+    height: 4rem;
+    list-style: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.opt-extended{
+    width: 30rem;
+}
+
+.fourth{
+    display: none;
+}
+
+.selected-option{
+    background-color: #d5afa2;
+    color: #fefbf4;
+}
+
+.description{
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 60rem;
+}
+
+.next-btn{
+    transform: translateY(50px);
+}
+
+/* --------- VARIANTS ---------*/
+.next-question{
+    animation: change 1s forwards;
+}
+
+@keyframes change{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* --------- RESULTS ---------*/
+.results{
+    width: 100%;
+    display: none;
+}
+
+.show-results{
+    animation: showResults 1s forwards;
+}
+
+@keyframes showResults{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.results-title{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.results-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.result{
+    background-color: #ffff;
+    width: 30%;
+    height: 30rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+}
+
+.img-container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-container>img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.text{
+    text-align: center;
+    font-weight: 500;
+}
+
+.cost{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.add{
+    width: 70%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brown-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.add:hover{
+    background-color: rgb(247, 222, 195);
+}
